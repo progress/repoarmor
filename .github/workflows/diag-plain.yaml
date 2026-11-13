@@ -1,0 +1,11 @@
+name: Diag plain
+on:
+  pull_request:
+  push:
+    branches: [test/ci-cd-checks]
+permissions: {}
+jobs:
+  plain:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "runner works"
