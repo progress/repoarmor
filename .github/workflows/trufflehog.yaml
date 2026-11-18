@@ -29,4 +29,7 @@ jobs:
           persist-credentials: false
 
       - name: Scan for Secrets
-        uses: prgs-community/githubactions-reusableworkflows/actions/trufflehog@8adadbf737708f9d2fda6fc0bef7a81672de4567 # v1.3.0
+        uses: trufflesecurity/trufflehog@3bd2b5887eb0efb8fa18bfd1d296032924e4ffdc # v3.99.9
+        with:
+          version: v3.99.9
+          extra_args: --results=verified,unknown --fail
