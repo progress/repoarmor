@@ -1,6 +1,6 @@
 # RepoArmor
 
-A CLI tool for managing TruffleHog secret scanning results with a rich terminal interface.
+A CLI tool for managing [TruffleHog](https://github.com/trufflesecurity/trufflehog) secret scanning results with a rich terminal interface.
 
 RepoArmor is built on top of the open-source [TruffleHog](https://github.com/trufflesecurity/trufflehog) scanner. It wraps the scanning engine with a structured workflow for triaging, tracking, and reporting on exposed secrets such as API keys, tokens, and credentials, and adds auditing commands for CI coverage and repository access.
 
