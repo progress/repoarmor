@@ -37,7 +37,7 @@ To add a provider, add an API client under `repoarmor/scanner/` modeled on the e
 
 - Tests must not call real provider APIs or run TruffleHog. Mock HTTP calls (for example `monkeypatch.setattr("repoarmor.scanner.github_api.requests.request", ...)`, as in `tests/test_github_api.py`).
 - Tests must not read or write your real RepoArmor data directory. Use `tmp_path` or monkeypatching.
-- The checked-in workflows run TruffleHog on pull requests. Black Duck and Polaris scans run only for branches in the main repository, so they appear as skipped on fork pull requests. Run `pytest` locally after installing the dev extras; no pytest matrix or package-build workflow is currently checked in.
+- The checked-in workflows run TruffleHog, Black Duck and Polaris on pull requests, and CI runs `pytest` on Python 3.10 to 3.13 and builds the package. Black Duck and Polaris run only for branches in the main repository, so they appear as skipped on fork and Dependabot pull requests. Run `pytest` locally after installing the dev extras.
 
 ## Contribution process
 
